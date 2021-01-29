@@ -1,0 +1,178 @@
+@import 'color-variables.scss';
+#back-to-top {
+    padding: 15px;
+    border-top: 1px solid #eceff1;
+    border-bottom: 1px solid #cfd8dc;
+    text-align: center;
+    font-size: 22px;
+    color: $footerColor;
+    width: 97%;
+    .fa {
+        background-color: hsla(0, 0%, 74.5%, .41);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+}
+.footer {
+    background-color: $footerBack;
+    margin-top: 15px;
+    direction: rtl;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+}
+.footer-item {
+    background-color: $footerBack;
+    position: relative;
+    margin-right: 30px;
+    text-align: right;
+    input {
+        width: 260px !important;
+        padding: 3px 10px !important;
+        margin: 20px 0 !important;
+        background-color: white !important;
+    }
+    button {
+        position: absolute;
+        top: 43px;
+        margin: 0 !important;
+        background-color: #00bfd6;
+        text-align: center;
+        width: 87px;
+        padding: 11px 24px;
+        font-size: 14px;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: white;
+    }
+    .footer-title {
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        color:$IiconsHover;
+    }
+    .footer-text {
+        cursor: pointer;
+        font-size: 13px;
+        color:$footerText;
+        padding: 7px;
+    }
+}
+.options-digikala {
+    background-color: #eceff1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        text-align: center;
+        color: $firstGray;
+        font-size: 13px;
+        padding: 15px 40px;
+        display: flex;
+        flex-direction: column;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            direction: rtl;
+            width: 50px;
+            height: 60px;
+        }
+    }
+}
+.info{
+    @media screen and (max-width:1024px){
+        display: none;
+    }
+    font-family: "iranyekan";
+    text-align: center;
+    font-size: 14px;
+    color: darkslategray;
+}
+.download {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-gap: 0;
+    img {
+        margin: 10px;
+        background-color: black;
+        width: 160px;
+        height: 50px;
+    }
+}
+.dark-footer-container{
+    margin-top: 25px;
+    padding: 10px 50px;
+    span{
+        text-align: center;
+        display: block;
+        padding: 10px;
+    }
+    .dark-footer{
+        display: grid;
+        grid-template-columns: 35% 65%;
+        @media screen and (max-width:1024px){
+            display: block;
+            grid-template-columns: none;
+        }
+    .icons{
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (max-width:1024px){
+            display: flex;
+            img{
+                padding: 5px;
+                margin: 5px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        img{
+            border-radius: 8px;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: lighten($lightBack, 15%);
+        }
+    }
+    .text{
+        text-align: right;
+        p{
+            font-size: 12px;
+            color: $firstGray;
+            line-height: 30px;
+            color: $paragraph;
+        }
+        b{
+            color: darkslategray;
+        }
+    }
+}
+    background-color: $darkgray;
+}
+.digi-partners{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto auto;
+    img{
+        border-radius: none;
+        margin: 0 40px 10px 40px;
+    }
+}
+.email-input{
+    position: relative;
+    input{
+        top: 0;
+    }
+    button{
+        top: 20px;
+    }
+}

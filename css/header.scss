@@ -1,0 +1,288 @@
+@import 'color-variables.scss';
+@keyframes progress{
+    from{width: 0%;}
+    to{width: 100%;}
+}
+.containers{
+    position: absolute;
+    background-color: $footerBack;
+    display: none;
+}
+#navigation {
+    direction: rtl;
+    display: grid;
+    align-items: center;
+    padding-top: 15px;
+    grid-gap: 20px;
+    grid-template-columns: 10% 68% 22% !important;
+}
+.digikala-logo {
+    border-radius: none;
+    margin-right: 30px;
+}
+.responsive-header{
+    @media screen and (min-width:1024px){
+        display: none;
+    }
+    background-color: white;
+    box-shadow: 0 7px 8px 0 rgba(0, 0, 0, .04);
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    .header-logo-container{
+        .questions{
+            margin-top: 20px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            padding: 1px;
+            text-align: center;
+            width: 15px;
+            height: 15px;
+            margin-left: 10px;
+        }
+        .hamburger-container{
+            margin-top: 10px;
+            width: 20px;
+            height: 20px;
+            padding: 20px;
+        }
+        .digikala-logo{
+            text-align: center;
+            margin-top: 20px;
+        }
+        width: 100%;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 30% 50% 10%;
+    }
+    .header-search-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .fa-shopping-basket{
+            position: relative;
+            left: -30px;
+        }
+        span{
+            margin-right: 25px;
+        }
+        input{
+            position: relative;
+            background-color: $footerBack;
+        }
+        position: relative;
+        width: 100%;
+    }
+    .header-location-container{
+        font-size: 12px !important;
+        text-align: center;
+        position: relative;
+        padding: 5px;
+        width: 100%;
+    }
+}
+#header {
+    @media screen and (max-width:1024px){
+        display: none;
+    }
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 7px 8px 0 rgba(0, 0, 0, .04);
+    background-color: white;
+}
+.is-half {
+    width: 48%;
+    margin-left: 20px;
+}
+#menu-container {
+    transition: all 0.5s linear;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: white;
+    box-shadow: 50px 0 rgb(78, 75, 75);
+    text-align: right;
+}
+.list-item {
+    div,b {
+        padding: 5px;
+    }
+    .brand-img-container{
+        display: flex;
+        flex-direction: row;
+        img{
+            width: 95px !important;
+            height: 95px !important;
+        }
+    }
+    padding: 0px;
+    margin-top: 30px;
+    text-align: right;
+    padding-right: 15px;
+}
+.entery {
+    cursor: pointer;
+    padding: 7px 17px;
+    color: $firstGray;
+    text-align: left;
+}
+.veritcal-line {
+    width: 0;
+    height: 200px;
+    background-color: $lightBack;
+    padding: 0.5px;
+    margin: 15px;
+}
+#location {
+    cursor: pointer;
+    font-size: 12px;
+    color: $firstGray;
+    margin-left:30px;
+    margin-top: 30px;
+}
+#first-list {
+    display: flex;
+    flex-direction: row-reverse;
+    .product-category-list {
+        z-index: 20;
+        @extend .containers;
+        top: 40px;
+        height: 480px;
+        width: 180px;
+        right: 40px;
+        padding: 0;
+    }
+    .digi-plus {
+        z-index: 2;
+        cursor: pointer;
+        position: relative;   
+        &:hover {
+            .digi-plus-container {
+                display: flex;
+            }
+        }
+        .digiclub-plus-pic {
+            width: 300px;
+            height: 150px;
+            margin: 10px;
+            display: inline;
+        }
+        .digi-plus-container {
+            width: 650px;
+            right: -120px;
+            top: 61px;
+            @extend .containers;
+            .digi-item img {
+                width: 60px;
+                height: 15px;
+            }
+        }
+    }
+    .list-items{
+        top: 0;
+        right: 180px;
+        width: 1100px;
+        flex-direction: row;
+        img {
+            width: 283px;
+            height: 212px;
+        }
+        @extend .containers;
+        direction: rtl;
+    }
+    .list-item-digital-container {
+       @extend .list-items;
+    }
+    .list-item-car-container {
+        @extend .list-items;
+        border-bottom-right-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+    .product-list-item {
+        padding: 15px 0px;
+        width: 100%;
+        span{
+            padding: 5px;
+        }
+        &:hover {
+            span {
+                color: red;
+            }
+            border-top: 0.5px solid $lightBorder;
+            border-bottom: 0.5px solid $lightBorder;
+            background-color: $footerBack;
+        }
+    }
+    .digi-club {
+        z-index: 2;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            .digi-club-container {
+                display: flex;
+            }
+        }
+        .digi-club-container {
+            @extend .containers;
+            direction: rtl;
+            width: 600px;
+            right: -120px;
+            top: 61px;
+            flex-direction: row-reverse;
+        }
+    }
+    .product-category {
+        &:hover {
+            .product-category-list {
+                display: block;
+            }
+        }
+    }
+    li {
+        color: $firstGray;
+        padding: 8px 3px 8px 0;
+    }
+    .car-item {
+        &:hover {
+            .list-item-car-container {
+                display: flex;
+                border-right: 1px solid $lightBorder;
+            }
+        }
+    }
+    .product-item {
+        &:hover{
+            border-bottom: 1px solid $redishBack;
+        }
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .digital-item {
+        &:hover {
+            .list-item-digital-container {
+                border-right: 1px solid $lightBorder;
+                display: flex;
+            }
+        }
+    }
+}
+.hamburger-container {
+    .hamburger-icon {
+        width: 15px;
+        height: 2px;
+        background-color: black;
+        margin: 3px 10px;
+    }
+    float: right;
+}
+.digi-item {
+    padding: 10px;
+    color: black;
+}
+.digi-icon {
+        cursor: pointer;
+    img {
+        width: 380px;
+        height: 190px;
+    }
+}

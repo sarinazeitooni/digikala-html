@@ -1,0 +1,351 @@
+@import 'color-variables.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'global.scss';
+.image-size{
+    @media screen and (max-width:600px){
+        width: 100px;
+        height: 100px;
+    }
+    width: 170px;
+    height: 170px;
+}
+.card{
+    border-radius: 8px;
+    margin: 20px 10px;
+    background-color: white;
+}
+.image-baner {
+    background-image: url('../img/cb9605bc948c99c36672b76412568ec28ff9b9a2_1610353261.gif');
+    background-size: cover;
+    height: 80px;
+    border-radius: 16px;
+    width: 97%;
+    margin: 30px 20px 0 20px;
+}
+.images-container {
+    cursor: pointer;
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 37% 63%;
+    height: 400px;
+    .swiper-container {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .pic-slide{
+                border-radius: 16px;
+                width: 100%;
+                height: 100%;
+              }
+          }
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            color: #000;
+            opacity: 1;
+            background:white;
+            transition: all 0.5s;
+            &:hover{
+                width: 13px;
+                height: 13px;
+            }
+          }
+            .swiper-button-prev,.swiper-button-next{
+                &:after{
+                    font-size: 25px;
+                }
+                color: white;
+            }
+            .swiper-pagination-bullet-active {
+                color: #fff;
+                background: #00bfd6;
+            }
+        }
+    }
+    .ad-container {
+        margin: 13px;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        img {
+            border-radius: 15px;
+            width: 100%;
+            height: 200px;
+        }
+}
+.slider-product-container {
+    background-color: $redishBack;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 520px;
+    text-align: right;
+    .back-image-container{
+        width: 50%;
+    .back-image{
+        background-image: url("../img/b6c724a0.png");
+        background-size: cover;
+        width: 100%;
+        height: 80%;
+    }
+}
+    img {
+        width: 180px;
+        height: 420px;
+        margin: 20px 10px;
+    }
+    button {
+        position: relative;
+        right: 50%;
+        font-size: 18px;
+        transform: translateX(50%);
+        padding: 10px 25px;
+        border: 1px solid white;
+        background-color: inherit;
+        color: white;
+        i {
+            padding-right: 5px;
+            color: white;
+        }
+    }
+    .product-slide-container {
+        overflow: hidden;
+        margin-top: 35px;
+        display: flex;
+        .swiper-button-prev,.swiper-button-next{
+            transform: translateY(-50%);
+            @extend .card;
+            width: 40px;
+            height: 90px;
+            border: 1px solid rgba(167, 167, 167, 0.63);
+            color: black;
+        }
+        .product-slide-item {
+            cursor: pointer;
+            position: relative;
+            @extend .card;
+            width: 260px;
+            height: 410px;
+            #countDown{
+                margin-top: 10px;
+                display: block;
+            }
+            .price-container {
+                .price{
+                    font-weight: bold;
+                    margin-left: 28px;
+                }
+                text-align: left;
+                margin: 40px 10px;
+                div {
+                    margin-top: 10px;
+                    color: black;
+                    .discount {
+                        padding: 5px;
+                        background-color: $redishBack;
+                        border-radius: 20px;
+                        color: white;
+                    }
+                    span {
+                        position: relative;
+                        hr {
+                            position: absolute;
+                            top: 40%;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                background: transparent;
+                width: 100%;
+                img {
+                    height: 60%;
+                }
+                div {
+                    margin: 10px;
+                    font-size: 12px;
+                    color: grey;
+                    background: transparent;
+                }
+            }
+            i {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            button {
+                vertical-align: middle;
+                height: 50px;
+                width: 95px;
+                color: $grayColor;
+            }
+        }
+    }
+}
+.brand-img-container {
+    display: flex;
+    flex-direction: row-reverse;
+    img {
+        margin: 10px;
+        width: 90px;
+        height: 90px;
+    }
+}
+.fa {
+    color: $firstGray
+}
+.pic-container {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    img{
+        margin: 10px;
+        height: 235px;
+    }
+    .one-fourth{
+        @media  screen and (max-width:1025px){
+            width: 47%;
+        }
+        @media  screen and (max-width:660px){
+            width: 96%;
+        }
+        cursor: pointer;
+        width: 23%;
+    }
+    .half{
+        cursor: pointer;
+        @media  screen and (max-width:1025px){
+            width: 96%;
+        }
+        width: 48%;
+    }
+}
+.social-media-container {
+    display: flex;
+    flex-direction: row;
+    .social-media-icon {
+        margin: 15px;
+        i {
+            color: $Iicons;
+            &:hover {
+                color:$IiconsHover;
+            }
+        }
+    }
+}
+.advices{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    color: $firstGray;
+    .single-pic-advice{
+    text-align: center;
+    @extend .card;
+    overflow: hidden;
+        height: 315px;
+        box-shadow: 0 2px 4px 0 gray;
+        .progress{
+            float: left;
+            margin-top: 5px;
+            background-color: red;
+            height: 1px;
+            animation: progress 7s infinite;
+        }
+    b{
+        font-size: 13px;
+        font-weight: normal;
+        padding-top: 20px;
+        color: $firstGray;
+    }
+    img{
+        padding: 10px;
+        margin: 10px;
+        @extend .image-size;
+     }
+    }
+.book-container{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    direction: rtl;
+    @extend .card;
+    .books-title{
+        width: 30%;
+        display: inline;
+        border-bottom:1px solid red;
+        padding: 10px;
+        position: relative;
+        top: 10px;
+    }
+    hr{
+        background-color: $lightBorder !important;
+        width: 85%;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .slider-container{
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        .book-slider-item{
+            cursor: pointer;
+            font-size: 13px;
+            color: $grayColor;
+            margin: 15px;
+            img{
+                @extend .image-size;
+             }
+             .bold-price{
+                 font-size: 17px;
+                text-align: left;
+                font-weight:bold;
+                color:black;
+             }
+            }
+         }
+    }
+}
+.promotion-container{
+    .promotion-flex{
+        display: flex;
+        flex-wrap: wrap;
+    justify-content: center;
+    }
+    @extend .card;
+    .promotion-title{
+        text-align: center;
+        display: block;
+        color: gray;
+        font-size: 17px;
+        padding-top: 15px;
+    }
+    .promotion-child{
+        i{
+            margin-bottom: 10px;
+            font-size: 50px;
+            color: $blue;
+            display: block;
+        }
+        .product-quantity{
+            color: $blue;
+        }
+        padding: 30px;
+        text-align: center;
+        display: block;
+        font-size: 11px;
+        cursor: pointer;
+    }
+}
